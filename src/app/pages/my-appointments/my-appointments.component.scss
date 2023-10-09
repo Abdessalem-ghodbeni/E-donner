@@ -1,0 +1,17 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.actionContainer .accepted,
+.actionContainer .declined,
+.actionContainer .pending {
+  width: 100px;
+  opacity: 1 !important;
+  transform: none;
+  box-shadow: none;
+}

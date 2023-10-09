@@ -1,0 +1,272 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body"></div>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div
+          class="card-header border-0 d-flex justify-content-between align-items-center"
+        >
+          <h3 class="mb-0">Créer un centre</h3>
+        </div>
+        <div class="card-body">
+          <mat-stepper linear #stepper>
+            <mat-step [stepControl]="centerInfo" [editable]="isEditable">
+              <form [formGroup]="centerInfo">
+                <ng-template matStepLabel>Information du centre</ng-template>
+
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <mat-form-field appearance="standard">
+                          <label class="form-control-label" for="centerName"
+                            >Nom</label
+                          >
+                          <input
+                            matInput
+                            id="centerName"
+                            type="text"
+                            class="form-control"
+                            placeholder="Nom du centre"
+                            formControlName="nom"
+                            required
+                          />
+                        </mat-form-field>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <mat-form-field appearance="standard">
+                          <label class="form-control-label" for="address"
+                            >Adresse</label
+                          >
+                          <input
+                            matInput
+                            type="text"
+                            id="address"
+                            class="form-control"
+                            placeholder="Addresse du centre"
+                            formControlName="addresse"
+                            required
+                          />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <mat-form-field appearance="standard">
+                          <label class="form-control-label" for="phone"
+                            >Téléphone</label
+                          >
+                          <input
+                            matInput
+                            id="phone"
+                            type="number"
+                            class="form-control"
+                            placeholder="Num du téléphone"
+                            formControlName="telephone"
+                            required
+                          />
+                        </mat-form-field>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <mat-form-field appearance="standard">
+                          <label class="form-control-label" for="email"
+                            >E-mail</label
+                          >
+                          <input
+                            matInput
+                            type="email"
+                            id="email"
+                            class="form-control"
+                            placeholder="E-mail du centre"
+                            formControlName="email"
+                            required
+                          />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button mat-button matStepperNext class="btn btn-primary">
+                    Suivant
+                  </button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step [stepControl]="responsableInfo" [editable]="isEditable">
+              <form [formGroup]="responsableInfo">
+                <ng-template matStepLabel>Affecter responsable</ng-template>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <mat-form-field appearance="standard">
+                          <label class="form-control-label" for="name"
+                            >Nom</label
+                          >
+                          <input
+                            matInput
+                            id="name"
+                            type="text"
+                            class="form-control"
+                            placeholder="Nom"
+                            formControlName="nom"
+                            required
+                          />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <mat-form-field appearance="standard">
+                          <label class="form-control-label" for="prenom"
+                            >Prenom</label
+                          >
+                          <input
+                            matInput
+                            type="text"
+                            id="cin"
+                            class="form-control"
+                            placeholder="Prenom"
+                            formControlName="prenom"
+                            required
+                          />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <mat-form-field appearance="standard">
+                          <label class="form-control-label" for="email"
+                            >E-mail</label
+                          >
+                          <input
+                            matInput
+                            type="email"
+                            id="email"
+                            class="form-control"
+                            placeholder="E-mail"
+                            formControlName="email"
+                            required
+                          />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <mat-form-field appearance="standard">
+                          <label class="form-control-label" for="telephone"
+                            >Telephone</label
+                          >
+                          <input
+                            matInput
+                            id="telephone"
+                            type="number"
+                            class="form-control"
+                            placeholder="Telephone"
+                            formControlName="telephone"
+                            required
+                          />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <mat-form-field appearance="standard">
+                          <label class="form-control-label" for="cin"
+                            >CIN</label
+                          >
+                          <input
+                            matInput
+                            type="number"
+                            id="cin"
+                            class="form-control"
+                            placeholder="CIN"
+                            formControlName="cin"
+                            required
+                          />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <mat-form-field appearance="standard">
+                          <label class="form-control-label" for="age"
+                            >Ville</label
+                          >
+                          <input
+                            matInput
+                            id="age"
+                            type="text"
+                            class="form-control"
+                            placeholder="Ville"
+                            formControlName="ville"
+                            required
+                          />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div>
+                  <button
+                    mat-button
+                    matStepperPrevious
+                    class="btn btn-secondary"
+                  >
+                    Précédent
+                  </button>
+                  <button mat-button matStepperNext class="btn btn-primary">
+                    Suivant
+                  </button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Confirmation</ng-template>
+              <div>
+                <button mat-button matStepperPrevious class="btn btn-secondary">
+                  Précédent
+                </button>
+
+                <button
+                  mat-button
+                  (click)="stepper.reset()"
+                  class="btn btn-secondary"
+                >
+                  Annuler
+                </button>
+                <button mat-button class="btn btn-primary"  (click)="submit()">Confirmer</button>
+              </div>
+            </mat-step>
+          </mat-stepper>
+        </div>
+        <!-- <div class="table-responsive">
+         
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

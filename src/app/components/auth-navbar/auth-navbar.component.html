@@ -1,0 +1,112 @@
+<nav
+  class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg"
+>
+  <div
+    class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+  >
+    <div
+      class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+    >
+      <a
+        [routerLink]="['/']"
+        class="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+      >
+        BloodDon
+      </a>
+      <button
+        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+        type="button"
+        (click)="setNavbarOpen()"
+      >
+        <i class="text-white fas fa-bars"></i>
+      </button>
+    </div>
+    <div
+      class="lg:flex flex-grow items-center lg:bg-opacity-0 lg:shadow-none"
+      [ngClass]="{ hidden: !navbarOpen, 'block rounded shadow-lg': navbarOpen }"
+      id="example-navbar-warning"
+    >
+      <!-- bg-white -->
+      <ul
+        class="flex flex-col lg:flex-row list-none lg:ml-auto mb-0"
+        *ngIf="!connectedUser"
+      >
+        <li class="flex items-center">
+          <button
+            class="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+            type="button"
+            [routerLink]="['/login']"
+          >
+            Login
+          </button>
+        </li>
+        <li class="flex items-center">
+          <button
+            class="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+            type="button"
+            [routerLink]="['/register']"
+          >
+            Register
+          </button>
+        </li>
+      </ul>
+      <ul
+        class="flex flex-col lg:flex-row list-none lg:ml-auto"
+        *ngIf="connectedUser"
+      >
+        <li class="nav-item" ngbDropdown placement="bottom-right">
+          <a class="nav-link pr-0" role="button" ngbDropdownToggle>
+            <div class="media align-items-center">
+              <span class="avatar avatar-sm rounded-circle">
+                <img
+                  alt="Image placeholder"
+                  [src]="userImage"
+                  class="avatarImage"
+                />
+              </span>
+              <div class="media-body ml-2 d-none d-lg-block">
+                <span class="mb-0 text-sm font-weight-bold">{{
+                  connectedUser.name
+                }}</span>
+              </div>
+            </div>
+          </a>
+          <div class="dropdown-menu-arrow dropdown-menu-right" ngbDropdownMenu>
+          
+            <a
+              routerLinkActive="active"
+              [routerLink]="['/my-profile']"
+              class="dropdown-item"
+            >
+              <i class="ni ni-single-02"></i>
+              <span>Mon Profile</span>
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="dropdown-item"
+              (click)="handleLogout()"
+            >
+              <i class="ni ni-user-run"></i>
+              <span>Se déconnecter</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item btn-rotate" ngbDropdown placement="bottom-left">
+          <a class="nav-link" ngbDropdownToggle id="navbarDropdownMenuLink">
+            <span class="d-md-none d-lg-inline-block s-sm-block">{{
+              username
+            }}</span>
+          </a>
+          <div
+            ngbDropdownMenu
+            aria-labelledby="navbarDropdownMenuLink"
+            class="dropdown-menu dropdown-menu-right"
+          >
+            <a ngbDropdownItem [routerLink]="['/pages/edit']">Profile </a>
+            <a (click)="onSignOut()" ngbDropdownItem> Se déconnecter </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,800,900&display=swap");
+$body-color: blue;
+$poppins: "Poppins", sans-serif;
+.hero {
+  background: #133a53 url(../../../assets/img/coverFarm.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-family: $poppins;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 70px;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      width: 70vw;
+      margin: auto;
+      transform-origin: left;
+      animation: reveal 1s ease-in-out forwards;
+      h1 {
+        font-size: 90px;
+        line-height: 0.9;
+        margin-bottom: 0px;
+        color: white;
+      }
+      p {
+        font-size: 24px;
+        color: white;
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ff6700;
+      z-index: 3;
+      animation: reveal 0.5s reverse forwards;
+      animation-delay: 0.5s;
+      transform-origin: left;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #133a53;
+      z-index: 2;
+      animation: reveal 0.7s reverse forwards;
+      animation-delay: 0.7s;
+      transform-origin: left;
+    }
+  }
+}
+
+h3 {
+  color: orange;
+  color: orange;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@keyframes reveal {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

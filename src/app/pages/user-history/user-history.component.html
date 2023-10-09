@@ -1,0 +1,92 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body"></div>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div
+          class="card-header border-0 d-flex justify-content-between align-items-center"
+        >
+          <h3 class="mb-0">
+            Historique de {{ userData.firstName }} {{ userData.lastName }}
+          </h3>
+          <!-- <button class="btn btn-primary" [routerLink]="['add']">
+                <i class="fas fa-plus mr-1"></i> Add
+              </button> -->
+        </div>
+        <div class="table-responsive">
+          <mat-form-field appearance="standard">
+            <mat-label>Rechercher...</mat-label>
+            <input
+              matInput
+              (keyup)="applyFilter($event)"
+              placeholder="Ex. Maskot"
+              class="tableSearch"
+              #input
+            />
+          </mat-form-field>
+
+          <table mat-table [dataSource]="dataSource" matSort>
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+              <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+              <td mat-cell *matCellDef="let row">{{ row.date }}</td>
+            </ng-container>
+            <ng-container matColumnDef="center">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Centre</th>
+              <td mat-cell *matCellDef="let row">{{ row.center }}</td>
+            </ng-container>
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Statut</th>
+              <td mat-cell *matCellDef="let row">
+                <button
+                  class="btn btn-secondary statusButton pendingStatus"
+                  *ngIf="row.status === 'pending'"
+                  disabled
+                >
+                  En cours
+                </button>
+                <button
+                  class="btn btn-danger statusButton"
+                  *ngIf="row.status === 'declined'"
+                  disabled
+                >
+                  Reporté
+                </button>
+                <button
+                  class="btn btn-success statusButton"
+                  *ngIf="row.status === 'accepted'"
+                  disabled
+                >
+                  Accepté
+                </button>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="4">No data</td>
+            </tr>
+          </table>
+
+          <mat-paginator
+            [pageSizeOptions]="[5, 10, 25, 100]"
+            aria-label="Select page of users"
+          ></mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

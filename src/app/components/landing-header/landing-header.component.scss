@@ -1,0 +1,231 @@
+mat-toolbar {
+  // overflow: hidden;
+  width: 100%;
+  background-color: #162033;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border: 0;
+  z-index: 2;
+  padding: 0;
+  height: 70px;
+  .navbar {
+    width: 100%;
+    padding: 0;
+
+    // ryu
+    .container-fluid {
+      padding: 0 20px;
+    }
+    .searchBox {
+      background: #2f3640;
+      border-radius: 40px;
+      &:hover > .searchInput {
+        width: 240px;
+        padding: 0 6px;
+      }
+      &:hover > .searchButton {
+        // background: white;
+        // color: #2f3640;
+      }
+
+      .searchButton {
+        color: white;
+        border: none;
+        background: #c7c7c7;
+        // color: #162033;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        // background: #2f3640;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        i {
+          color: #162033;
+        }
+      }
+
+      .searchInput {
+        border: none;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: white;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+      }
+    }
+    // ryu
+    .search {
+      display: flex;
+      justify-content: flex-end;
+      text-align: right;
+      position: relative;
+      input {
+        width: 200px;
+        font-size: 14px;
+        box-shadow: none;
+        padding-right: 30px;
+      }
+      .searchIcon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        color: #969393;
+        transform: translateY(-50%);
+      }
+    }
+    .navbar-collapse {
+      flex-grow: unset;
+    }
+    a {
+      color: white;
+      cursor: pointer;
+    }
+    .dropdown-menu {
+      padding: 0;
+      border: none;
+      position: absolute;
+      box-shadow: 0px 0px 9px 0px grey;
+      margin: 0;
+      a {
+        color: #162033;
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+        // padding: 10px 10px;
+        &:not(:last-child) {
+          border-bottom: solid 1px #e0e0e0;
+          border-radius: 0.25rem;
+        }
+        &:active {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+// mat-toolbar:after {
+//   color: #fff;
+//   content: " ";
+//   position: absolute;
+//   display: inline-flex;
+//   width: 25%;
+//   height: 100%;
+//   top: 0;
+//   right: 0;
+//   z-index: 2;
+//   background: #333;
+//   transform-origin: bottom left;
+//   -ms-transform: skew(-30deg, 0deg);
+//   -webkit-transform: skew(-30deg, 0deg);
+//   transform: skew(-30deg, 0deg);
+// }
+
+.logo {
+  padding: 0 1.25rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  text-decoration: none;
+  height: 50px;
+}
+
+.header-container {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+#hamburgerButton {
+  display: none;
+  background: transparent;
+  border: none;
+}
+.hamburger--collapse {
+  padding: 0;
+  opacity: 1 !important;
+  display: none;
+  // & .hamburger-inner{
+  //   top: unset;
+  // }
+  & .hamburger-inner,
+  & .hamburger-inner::before,
+  & .hamburger-inner::after {
+    background: rgba(255, 255, 255, 0.7);
+  }
+  .hamburger-box {
+    height: 33px;
+  }
+}
+/***************************************************/
+
+// @import "~bootstrap/scss/mixins/breakpoints";
+// @include media-breakpoint-down(sm) {
+//   .header-container {
+//     background: #000;
+//   }
+//   .header-container .navbar-nav {
+//     margin: auto;
+//     flex-direction: row;
+//     display: flex;
+//   }
+//   .nav-link {
+//     padding: 15px;
+//   }
+//   #hamburgerButton,
+//   .hamburger--collapse {
+//     display: block;
+//   }
+
+//   .navbar-collapse {
+//     display: block;
+//     position: fixed;
+//     top: 70px;
+//     width: 100%;
+//     // background: white;
+//     transition: all 0.3s ease;
+//     // overflow: hidden;
+//     left: 0;
+//     &.collapse:not(.show) {
+//       height: 0;
+//       overflow: hidden;
+//     }
+//     &.show {
+//       height: 50px;
+//     }
+//   }
+// }
+
+// @include media-breakpoint-down(xl) {
+//   nb-layout-header nav {
+//     height: 8.25rem;
+//     display: block;
+//   }
+// }
+// a {
+//   color: black;
+//   text-decoration: none;
+// }
+// a:hover {
+//   //cursor:-webkit-grab;
+//   cursor: move;
+//   cursor: grab;
+//   cursor: -moz-grab;
+//   cursor: -webkit-grab;
+// }
+// a:active {
+//   cursor: grabbing;
+//   cursor: -moz-grabbing;
+//   cursor: -webkit-grabbing;
+// }
+
+.avatarImage {
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,179 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+      <div class="header-body"></div>
+    </div>
+  </div>
+  <!-- Page content -->
+  <div class="container-fluid mt--7">
+    <!-- Table -->
+    <div class="row">
+      <div class="col">
+        <div class="card shadow">
+          <div
+            class="card-header border-0 d-flex justify-content-between align-items-center"
+          >
+            <h3 class="mb-0" >Ajouter un citoyen</h3>
+          </div>
+          <div class="card-body">
+            <form
+            role="form"
+         
+            [formGroup]="registerForm"
+          >
+            <div class="row">
+              <div class="form-group mb-3 col-md-6">
+                <label for="firstName" class="text-white">Nom</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="firstName"
+                    class="form-control"
+                    placeholder="Nom"
+                    type="text"
+                    formControlName="nom"
+                  />
+                </div>
+              </div>
+              <div class="form-group mb-3 col-md-6">
+                <label for="lastName" class="text-white">Prénom</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="lastName"
+                    class="form-control"
+                    placeholder="Prénom"
+                    type="text"
+                    formControlName="prenom"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-3 col-md-6">
+                <label for="email" class="text-white">Email</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="email"
+                    class="form-control"
+                    placeholder="Email"
+                    type="email"
+                    formControlName="email"
+                  />
+                </div>
+              </div>
+              <div class="form-group mb-3 col-md-6">
+                <label for="phone" class="text-white">Téléphone</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="phone"
+                    class="form-control"
+                    placeholder="Téléphone"
+                    type="number"
+                    formControlName="telephone"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-3 col-md-6">
+                <label for="cin" class="text-white">Cin</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="cin"
+                    class="form-control"
+                    placeholder="Cin"
+                    type="number"
+                    formControlName="cin"
+                  />
+                </div>
+              </div>
+              <div class="form-group mb-3 col-md-6">
+                <label for="age" class="text-white">Age</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="age"
+                    class="form-control"
+                    placeholder="Age"
+                    type="number"
+                    formControlName="age"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-3 col-md-6">
+                <label for="city" class="text-white">Ville</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="city"
+                    class="form-control"
+                    placeholder="Ville"
+                    type="text"
+                    formControlName="ville"
+                  />
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="password" class="text-white">Groupe Sanguin</label>
+                <div class="input-group input-group-alternative">
+                   <select  formControlName="groupe_sanguin"  class="form-control">
+                    
+                     <option value="A+">A+</option>
+                     <option value="A-">A-</option>
+                     <option value="B+">B+</option>
+                     <option value="B-">B-</option>
+                     <option value="O+">O+</option>
+                     <option value="O-">O-</option>
+                     <option value="AB+">AB+</option>
+                     <option value="AB-">AB-</option>
+
+                   </select>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="row">
+             
+              <div class="form-group col-md-6">
+                <label for="password" class="text-white">Password</label>
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="ni ni-lock-circle-open"></i
+                    ></span>
+                  </div>
+                  <input
+                    id="password"
+                    class="form-control"
+                    placeholder="Password"
+                    type="password"
+                    formControlName="password"
+                  />
+                </div>
+              </div>
+
+
+
+
+            </div>
+
+
+
+            <div class="text-center">
+              <button
+                type="submit"
+                class="btn btn-primary my-4 submitButton text-white"
+                [disabled]="!registerForm.valid"
+                (click)="handleRegister()"
+              >
+                Confirmer <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+          </div>
+     
+        </div>
+      </div>
+    </div>
+  </div>
+  

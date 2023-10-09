@@ -1,0 +1,168 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body"></div>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div
+          class="card-header border-0 d-flex justify-content-between align-items-center"
+        >
+          <h3 class="mb-0">Détails du responsable</h3>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="responsableInfo">
+            <div class="pl-lg-4">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <mat-form-field appearance="standard">
+                      <label class="form-control-label" for="firstName"
+                        >Nom</label
+                      >
+                      <input
+                        matInput
+                        id="firstName"
+                        type="text"
+                        class="form-control"
+                        placeholder="Nom"
+                        formControlName="nom"
+                        required
+                      />
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <mat-form-field appearance="standard">
+                      <label class="form-control-label" for="lastName"
+                        >Prénom</label
+                      >
+                      <input
+                        matInput
+                        id="lastName"
+                        type="text"
+                        class="form-control"
+                        placeholder="Prénom"
+                        formControlName="prenom"
+                        required
+                      />
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <mat-form-field appearance="standard">
+                      <label class="form-control-label" for="email"
+                        >E-mail</label
+                      >
+                      <input
+                        matInput
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="E-mail"
+                        formControlName="email"
+                        required
+                      />
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <mat-form-field appearance="standard">
+                      <label class="form-control-label" for="phone"
+                        >Téléphone</label
+                      >
+                      <input
+                        matInput
+                        id="phone"
+                        type="number"
+                        class="form-control"
+                        placeholder="Num du téléphone"
+                        formControlName="telephone"
+                        required
+                      />
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <mat-form-field appearance="standard">
+                      <label class="form-control-label" for="cin"
+                        >CIN</label
+                      >
+                      <input
+                        matInput
+                        type="number"
+                        id="cin"
+                        class="form-control"
+                        placeholder="CIN"
+                        formControlName="cin"
+                        required
+                      />
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <mat-form-field appearance="standard">
+                      <label class="form-control-label" for="age"
+                        >Ville</label
+                      >
+                      <input
+                        matInput
+                        id="age"
+                        type="text"
+                        class="form-control"
+                        placeholder="Ville"
+                        formControlName="ville"
+                        required
+                      />
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            <!--   <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <mat-form-field appearance="standard">
+                      <label class="form-control-label" for="center"
+                        >Centre</label
+                      >
+                      <mat-select
+                        placeholder="Centre"
+                        formControlName="id_centre"
+                        class="form-control border-0"
+                        required
+                        [disabled]="connectedUser.role !== 'responsable'"
+                      >
+                        <mat-option
+                          *ngFor="let center of centers"
+                          [value]="center.nom"
+                        >
+                          {{ center.nom }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <div>
+              <button mat-button class="btn btn-primary" (click)="submit()">Modifier</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

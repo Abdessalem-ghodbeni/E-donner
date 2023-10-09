@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header.bg-gradient-danger {
+  background: linear-gradient(359deg, #170808, transparent),
+    url(./assets/img/headerImage.avif) !important;
+}
+
+.actionButton {
+  font-size: 14px !important;
+  color: white !important;
+}
+.actionButton.viewButton {
+  background: #88c382 !important;
+}
+.actionButton.dateButton {
+  background: rebeccapurple !important;
+}
+.actionButton.deleteButton {
+  background: #c93e48 !important;
+}
+
+body.authBack,
+body.authBack .main-content {
+  background: linear-gradient(359deg, #170808, transparent),
+    url(./assets/img/auth_wallpaper.jpg) !important ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body.authBack .header.bg-gradient-danger {
+  background: transparent !important;
+}
+
+.tableSearch {
+  padding-left: 15px !important;
+}
+
+.tableSearch + span > label {
+  padding-left: 15px !important;
+}

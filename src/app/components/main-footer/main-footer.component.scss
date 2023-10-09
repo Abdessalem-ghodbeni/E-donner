@@ -1,0 +1,190 @@
+.logo {
+  width: 150px;
+  margin: 0 auto 7px;
+}
+h5.footer-join {
+  font-size: 18px;
+  color: white;
+}
+.fh5co-bg {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.fh5co-bg {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+.fh5co-bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#fh5co-footer {
+  padding: 50px;
+  clear: both;
+  .container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #fh5co-footer {
+    padding: 3em 0;
+  }
+}
+
+#fh5co-footer {
+  position: relative;
+}
+
+#fh5co-footer .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#fh5co-footer .fh5co-widget {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  #fh5co-footer .fh5co-widget {
+    text-align: left;
+  }
+}
+
+#fh5co-footer .copyright .block {
+  display: block;
+  color: #fff;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+.btn-primary {
+  background: #f85a16;
+  color: #fff;
+  border: 2px solid #f85a16;
+}
+
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+.align {
+  margin-left: auto;
+}
+
+.btn-social,
+a.btn-social {
+  border-radius: 50%;
+  color: #fff !important;
+  display: inline-block;
+  height: 54px;
+  line-height: 54px;
+  margin: 8px 4px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  webkit-transition: background-color 0.3s;
+  width: 54px;
+}
+
+.btn-social .fa,
+.btn-social i {
+  backface-visibility: hidden;
+  moz-backface-visibility: hidden;
+  ms-transform: scale(1);
+  o-transform: scale(1);
+  transform: scale(1);
+  transition: all 0.25s;
+  webkit-backface-visibility: hidden;
+  webkit-transform: scale(1);
+  webkit-transition: all 0.25s;
+}
+
+.btn-social:focus,
+.btn-social:hover {
+  color: #fff;
+  outline: 0;
+  text-decoration: none;
+}
+
+.btn-social:focus .fa,
+.btn-social:focus i,
+.btn-social:hover .fa,
+.btn-social:hover i {
+  ms-transform: scale(1.3);
+  o-transform: scale(1.3);
+  transform: scale(1.3);
+  webkit-transform: scale(1.3);
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+}
+
+.btn-facebook:hover {
+  background-color: #4c70ba;
+}
+
+.btn-google-plus {
+  background-color: #dd4b39;
+}
+
+.btn-google-plus:hover {
+  background-color: #e47365;
+}
+
+.btn-linkedin {
+  background-color: #0976b4;
+}
+
+.btn-linkedin:hover {
+  background-color: #0b96e5;
+}
+
+.btn-twitter {
+  background-color: #55acee;
+}
+
+.btn-twitter:hover {
+  background-color: #83c3f3;
+}
+
+.btn-youtube {
+  background-color: #e52d27;
+}
+
+.btn-youtube:hover {
+  background-color: #ea5955;
+}
+
+mat-form-field {
+  width: 100%;
+}
+textarea {
+  resize: none;
+}

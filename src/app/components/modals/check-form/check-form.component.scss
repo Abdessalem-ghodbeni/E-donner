@@ -1,0 +1,47 @@
+.modalContainer {
+  width: 600px;
+  max-width: 100%;
+}
+mat-form-field {
+  width: 100%;
+}
+
+.optionsContainer {
+  display: flex;
+  border: none;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.optionButton button span {
+  line-height: 36px !important;
+}
+
+.optionButton.mat-button-toggle-checked {
+  border-color: #5e72e5 !important;
+  background: #5e72e5 !important;
+  color: white !important;
+}
+
+.optionButton .mat-button-toggle-button {
+  outline: none !important;
+  padding: 0.4rem 1.25rem;
+}
+
+.optionButton {
+  background: white !important;
+  color: black !important;
+  border: solid 1.5px #716e6e !important;
+  transform: unset !important;
+  padding: 0;
+}
+
+.form-group {
+  border: solid 1.5px #716f6f;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.questionType {
+  margin: 0 !important;
+}

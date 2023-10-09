@@ -1,0 +1,299 @@
+<div style="  background: linear-gradient(45deg, #fcfcfc82, #5349491a),
+url(../../../assets/img/sidebarImage.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;">
+  <div class="row justify-content-center">
+    
+    <div class="col-lg-6 col-md-6">
+      <div class="card bg-secondary shadow border-0 glassCard">
+        <div class="card-body px-lg-5 py-lg-5">
+          <h1
+            class="text-white text-left mb-5"
+            style="font-weight: 900; font-size: 31px"
+          >
+            Test de Diabéte
+          </h1>
+     
+          <form role="form"  [formGroup]="questionnaireForm">
+            <div class="form-group mb-3">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                   
+                      <label class="form-control-label" for="budget" style="margin-right: 10px;"
+                        >Quel age avez-vous?</label
+                      >
+                      <fieldset id="group1">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio"  id="defaultInline1" name="1" value="moins de 45 ans" formControlName="age" >
+                        <label  for="defaultInline1">moins de 45 ans</label>
+                      </div>
+                      <!-- Default inline 2-->
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio"  id="defaultInline2" name="1" value="45 - 54 ans" formControlName="age" >
+                        <label  for="defaultInline2">45 - 54 ans</label>
+                      </div>
+                      <!-- Default inline 3-->
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio"  id="defaultInline3"  name="1" value="55 - 64 ans" formControlName="age" >
+                        <label  for="defaultInline3">55 - 64 ans</label>
+                      </div>
+
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio"  id="defaultInline4" name="1" value="64 ans et plus" formControlName="age" >
+                        <label  for="defaultInline4">64 ans et plus</label>
+                      </div>
+
+                    
+                    </fieldset>
+                      
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          
+
+
+
+            <div class="form-group">
+              
+
+              <label class="form-control-label" for="budget" style="margin-right: 10px;"
+              >Avez-vous un parent ou un frère ou une soeur diabétique</label
+            >
+            <fieldset id="group1">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio"  id="defaultInline1" name="2" value="oui" formControlName="isfamilleDiabete" >
+              <label  for="defaultInline1">oui</label>
+            </div>
+            <!-- Default inline 2-->
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio"  id="defaultInline2" name="2" value="non" formControlName="isfamilleDiabete" >
+              <label  for="defaultInline2">non</label>
+            </div>
+          
+              </fieldset>
+          </div>
+
+
+       
+
+
+              <div class="form-group">
+              
+
+                <label class="form-control-label" for="budget" style="margin-right: 10px;"
+                >Avez-vous déja récu un diagnostic d'hypertension artérielle?</label
+              >
+              <fieldset id="group1">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio"  id="defaultInline1" name="3" value="oui" formControlName="ishypertension" >
+                <label  for="defaultInline1">oui</label>
+              </div>
+              <!-- Default inline 2-->
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio"  id="defaultInline2" name="3" value="non" formControlName="ishypertension" >
+                <label  for="defaultInline2">non</label>
+              </div>
+              
+                </fieldset>
+            </div>
+
+
+
+
+            <div class="form-group">
+              
+
+              <label class="form-control-label" for="budget" style="margin-right: 10px;"
+              >Ressentez-vous une faim constante?</label
+            >
+            <fieldset id="group1">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio"  id="defaultInline1" name="4" value="oui" formControlName="faimConstante" >
+              <label  for="defaultInline1">oui</label>
+            </div>
+            <!-- Default inline 2-->
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio"  id="defaultInline2" name="4" value="non" formControlName="faimConstante" >
+              <label  for="defaultInline2">non</label>
+            </div>
+          
+              </fieldset>
+          </div>
+
+
+          <div class="form-group">
+              
+
+            <label class="form-control-label" for="budget" style="margin-right: 10px;"
+            >Etes-vous dans une diminuation continue et notable de vore poids?</label
+          >
+          <fieldset id="group1">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio"  id="defaultInline1" name="5" value="oui" formControlName="diminuationPoids" >
+            <label  for="defaultInline1">oui</label>
+          </div>
+          <!-- Default inline 2-->
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio"  id="defaultInline2" name="5" value="non" formControlName="diminuationPoids" >
+            <label  for="defaultInline2">non</label>
+          </div>
+        
+            </fieldset>
+        </div>
+
+        <div class="form-group">
+              
+
+          <label class="form-control-label" for="budget" style="margin-right: 10px;"
+          >Ressentez-vous d'un besoin fréquent d'uriner?</label
+        >
+        <fieldset id="group1">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio"  id="defaultInline1" name="6" value="oui" formControlName="besoinUriner" >
+          <label  for="defaultInline1">oui</label>
+        </div>
+        <!-- Default inline 2-->
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio"  id="defaultInline2" name="6" value="non" formControlName="besoinUriner" >
+          <label  for="defaultInline2">non</label>
+        </div>
+      
+          </fieldset>
+      </div>
+
+      <div class="form-group">
+              
+
+        <label class="form-control-label" for="budget" style="margin-right: 10px;"
+        >Ressentez-vous une soif constante?</label
+      >
+      <fieldset id="group1">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio"  id="defaultInline1" name="7" value="oui" formControlName="soifConstante" >
+        <label  for="defaultInline1">oui</label>
+      </div>
+      <!-- Default inline 2-->
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio"  id="defaultInline2" name="7" value="non" formControlName="soifConstante" >
+        <label  for="defaultInline2">non</label>
+      </div>
+    
+        </fieldset>
+    </div>
+
+
+    <div class="form-group">
+              
+
+      <label class="form-control-label" for="budget" style="margin-right: 10px;"
+      >Etes vous un homme ou une femme?</label
+    >
+    <fieldset id="group1">
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio"  id="defaultInline1" name="8" value="Femme" formControlName="sexe" >
+      <label  for="defaultInline1">Femme</label>
+    </div>
+    <!-- Default inline 2-->
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio"  id="defaultInline2" name="8" value="Homme" formControlName="sexe" >
+      <label  for="defaultInline2">Homme</label>
+    </div>
+  
+      </fieldset>
+  </div>
+
+
+  <div class="form-group">
+              
+
+    <label class="form-control-label" for="budget" style="margin-right: 10px;"
+    >Avez-vous un taux de cholestériol total élevé supérieur à 200?</label
+  >
+  <fieldset id="group1">
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  id="defaultInline1" name="9" value="Moins de 200mg/dl" formControlName="cholestériol" >
+    <label  for="defaultInline1">Moins de 200mg/dl</label>
+  </div>
+  <!-- Default inline 2-->
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  id="defaultInline2" name="9" value="200mg/dl et plus" formControlName="cholestériol" >
+    <label  for="defaultInline2">200mg/dl et plus</label>
+  </div>
+
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  id="defaultInline2" name="9" value="Inconnu" formControlName="cholestériol" >
+    <label  for="defaultInline2">Inconnu</label>
+  </div>
+
+    </fieldset>
+</div>
+
+
+
+<div class="form-group">
+              
+
+  <label class="form-control-label" for="budget" style="margin-right: 10px;"
+  >Si Vous etes une femme ! Avez-vous des antécédents de diabète pendant une grossesse?</label
+>
+<fieldset id="group1">
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  id="defaultInline1" name="10" value="oui" formControlName="grossesseDiabete" >
+    <label  for="defaultInline1">oui</label>
+  </div>
+  <!-- Default inline 2-->
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  id="defaultInline2" name="10" value="non" formControlName="grossesseDiabete" >
+    <label  for="defaultInline2">non</label>
+  </div>
+
+    </fieldset>
+</div>
+
+
+
+
+<div class="form-group">
+              
+
+  <label class="form-control-label" for="budget" style="margin-right: 10px;"
+  >Avez-vous accouché d'un bébé pesant plus de 9kg?</label
+>
+<fieldset id="group1">
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  id="defaultInline1" name="11" value="oui" formControlName="bebe9kg" >
+    <label  for="defaultInline1">oui</label>
+  </div>
+  <!-- Default inline 2-->
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  id="defaultInline2" name="11" value="non" formControlName="bebe9kg" >
+    <label  for="defaultInline2">non</label>
+  </div>
+
+    </fieldset>
+</div>
+
+
+
+            <div class="text-center">
+              <button
+                type="submit"
+                class="btn btn-primary my-4 submitButton text-white"
+                [disabled]="!questionnaireForm.valid"
+                (click)="submit()"
+              >
+                Valider <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,258 @@
+<div style="  background: linear-gradient(45deg, #fcfcfc82, #5349491a),
+url(../../../assets/img/sidebarImage.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;">
+  <div class="row justify-content-center">
+    
+    <div class="col-lg-6 col-md-6">
+      <div class="card bg-secondary shadow border-0 glassCard">
+        <div class="card-body px-lg-5 py-lg-5">
+          <h1
+            class="text-white text-left mb-5"
+            style="font-weight: 900; font-size: 31px"
+          >
+            Test de Cancer de sein
+          </h1>
+     
+          <form role="form"  [formGroup]="questionnaireForm">
+            <div class="form-group mb-3">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                   
+                      <label class="form-control-label" for="budget" style="margin-right: 10px;"
+                        >Quel age avez-vous?</label
+                      >
+                      <fieldset id="group1">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio"  id="defaultInline1" name="1" value="moins de 45 ans" formControlName="age" >
+                        <label  for="defaultInline1">moins de 45 ans</label>
+                      </div>
+                      <!-- Default inline 2-->
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio"  id="defaultInline2" name="1" value="45 - 54 ans" formControlName="age" >
+                        <label  for="defaultInline2">45 - 54 ans</label>
+                      </div>
+                      <!-- Default inline 3-->
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio"  id="defaultInline3"  name="1" value="55 - 64 ans" formControlName="age" >
+                        <label  for="defaultInline3">55 - 64 ans</label>
+                      </div>
+
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio"  id="defaultInline4" name="1" value="64 ans et plus" formControlName="age" >
+                        <label  for="defaultInline4">64 ans et plus</label>
+                      </div>
+
+                    
+                    </fieldset>
+                      
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          
+
+
+
+            <div class="form-group">
+              
+
+              <label class="form-control-label" for="budget" style="margin-right: 10px;"
+              >Avez-vous une modification d'un mamelon ou de l'aspect de la peau du sein?</label
+            >
+            <fieldset id="group1">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio"  id="defaultInline1" name="2" value="oui" formControlName="modificationMamelon" >
+              <label  for="defaultInline1">oui</label>
+            </div>
+            <!-- Default inline 2-->
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio"  id="defaultInline2" name="2" value="non" formControlName="modificationMamelon" >
+              <label  for="defaultInline2">non</label>
+            </div>
+          
+              </fieldset>
+          </div>
+
+
+       
+
+
+              <div class="form-group">
+              
+
+                <label class="form-control-label" for="budget" style="margin-right: 10px;"
+                >Avez-vous une masse dure dans un sein , fixe ou mobile , aux contours souvent irréguliers?</label
+              >
+              <fieldset id="group1">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio"  id="defaultInline1" name="3" value="oui" formControlName="masseDure" >
+                <label  for="defaultInline1">oui</label>
+              </div>
+              <!-- Default inline 2-->
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio"  id="defaultInline2" name="3" value="non" formControlName="masseDure" >
+                <label  for="defaultInline2">non</label>
+              </div>
+              
+                </fieldset>
+            </div>
+
+
+
+
+            <div class="form-group">
+              
+
+              <label class="form-control-label" for="budget" style="margin-right: 10px;"
+              >Est ce que les ganglions sont gonflés et dure , non douloureux au niveau de l'aisselle?</label
+            >
+            <fieldset id="group1">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio"  id="defaultInline1" name="4" value="oui" formControlName="ganglionsGonflé" >
+              <label  for="defaultInline1">oui</label>
+            </div>
+            <!-- Default inline 2-->
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio"  id="defaultInline2" name="4" value="non" formControlName="ganglionsGonflé" >
+              <label  for="defaultInline2">non</label>
+            </div>
+          
+              </fieldset>
+          </div>
+
+
+
+
+          <div class="form-group">
+                      
+
+            <label class="form-control-label" for="budget" style="margin-right: 10px;"
+            >Avez-vous des antécédents familiaux de cancer de sien?</label
+          >
+          <fieldset id="group1">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio"  id="defaultInline1" name="5" value="oui" formControlName="antecedentsFamiliaux" >
+            <label  for="defaultInline1">oui</label>
+          </div>
+          <!-- Default inline 2-->
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio"  id="defaultInline2" name="5" value="non" formControlName="antecedentsFamiliaux" >
+            <label  for="defaultInline2">non</label>
+          </div>
+
+            </fieldset>
+        </div>
+
+        <div class="form-group">
+              
+
+          <label class="form-control-label" for="budget" style="margin-right: 10px;"
+          >Quel age avez-vous lorsque vous etes tombes enceinte la premiére fois?</label
+        >
+        <fieldset id="group1">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio"  id="defaultInline1" name="6" value="Plus de 35 ans" formControlName="encientePremierefois" >
+          <label  for="defaultInline1">Plus de 35 ans</label>
+        </div>
+        <!-- Default inline 2-->
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio"  id="defaultInline2" name="6" value="Moins de 35 ans" formControlName="encientePremierefois" >
+          <label  for="defaultInline2">Moins de 35 ans</label>
+        </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+              
+
+        <label class="form-control-label" for="budget" style="margin-right: 10px;"
+        >Avez-vous recu un traitement hormonal subsitutif?</label
+        >
+        <fieldset id="group1">
+        <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio"  id="defaultInline1" name="7" value="oui" formControlName="traitementHormonal" >
+        <label  for="defaultInline1">oui</label>
+        </div>
+        <!-- Default inline 2-->
+        <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio"  id="defaultInline2" name="7" value="non" formControlName="traitementHormonal" >
+        <label  for="defaultInline2">non</label>
+        </div>
+
+        </fieldset>
+        </div>
+
+
+
+
+  <div class="form-group">
+              
+
+    <label class="form-control-label" for="budget" style="margin-right: 10px;"
+    >Resentez-vous des maux de tete , une vision double et une faiblaisse musculaire?</label
+  >
+  <fieldset id="group1">
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  id="defaultInline1" name="8" value="oui" formControlName="faiblesse" >
+    <label  for="defaultInline1">oui</label>
+  </div>
+  <!-- Default inline 2-->
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  id="defaultInline2" name="8" value="non" formControlName="faiblesse" >
+    <label  for="defaultInline2">non</label>
+  </div>
+
+
+    </fieldset>
+</div>
+
+
+
+<div class="form-group">
+              
+
+  <label class="form-control-label" for="budget" style="margin-right: 10px;"
+  >Resentez vous d'un essoufflement , une taux et une accumulation de liquide autour des poumons?</label
+>
+<fieldset id="group1">
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  id="defaultInline1" name="9" value="oui" formControlName="accumulationPoumons" >
+    <label  for="defaultInline1">oui</label>
+  </div>
+  <!-- Default inline 2-->
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  id="defaultInline2" name="9" value="non" formControlName="accumulationPoumons" >
+    <label  for="defaultInline2">non</label>
+  </div>
+
+    </fieldset>
+</div>
+
+
+
+
+
+
+            <div class="text-center">
+              <button
+                type="submit"
+                class="btn btn-primary my-4 submitButton text-white"
+                [disabled]="!questionnaireForm.valid"
+                (click)="submit()"
+              >
+                Valider <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

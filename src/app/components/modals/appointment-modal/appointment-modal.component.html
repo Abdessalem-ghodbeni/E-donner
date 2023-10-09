@@ -1,0 +1,49 @@
+<!-- <h1 mat-dialog-title>Hi {{ data.name }}</h1> -->
+<div class="modalContainer">
+  <h1 mat-dialog-title>Prendre un rendez-vous</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="appointmentForm">
+      <div class="form-group">
+        <mat-form-field appearance="standard">
+          <h4 class="font-weight-bold mb-0">Quel est votre groupe sangiun?</h4>
+
+          <select  formControlName="bloodGroup"  class="form-control">
+                    
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+
+          </select>
+          
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <h4 class="font-weight-bold mb-0">Sélectionner une date</h4>
+        <mat-form-field
+          class="example-full-width"
+          color="accent"
+          appearance="fill"
+        >
+          <!-- <mat-label>Sélectionner Date</mat-label> -->
+          <input matInput [min]="minDate" type="date" formControlName="date"/>
+        
+        
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button class="btn btn-secondary" mat-dialog-close>
+      Anuuler
+    </button>
+    <button mat-button class="btn btn-primary" (click)="confirmer()" cdkFocusInitial>
+      <!-- [mat-dialog-close]="''" -->
+      Confirmer
+    </button>
+  </div>
+</div>

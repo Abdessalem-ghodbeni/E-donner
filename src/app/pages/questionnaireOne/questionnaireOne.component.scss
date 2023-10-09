@@ -1,0 +1,26 @@
+.submitButton {
+  display: block;
+  width: 100%;
+  background: red !important;
+  border-color: red !important;
+  height: 45px;
+}
+.glassCard {
+  background: rgb(255 255 255 / 17%) !important;
+  box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%) !important;
+  backdrop-filter: blur(4px) !important;
+  border-radius: 10px !important;
+  width: 600px;
+  max-width: 100%;
+  margin-left: auto;
+}
+
+.leftTitle {
+  font-size: 50px !important;
+  line-height: 55px !important;
+  font-weight: 300 !important;
+}
+
+.leftNote {
+  font-size: 18px;
+}

@@ -1,0 +1,121 @@
+<!-- <app-landing-header></app-landing-header>
+<app-main-hero></app-main-hero>
+<app-landing-projects></app-landing-projects>
+<app-main-footer></app-main-footer> -->
+
+<app-auth-navbar></app-auth-navbar>
+<main>
+  <div
+    class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75"
+    style="padding-top: 8rem"
+  >
+    <div
+      class="absolute top-0 w-full h-full bg-center bg-cover"
+      style="background-image: url('../../../assets/img/sidebarImage.jpg')"
+    >
+      <!-- background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80'); -->
+      <span
+        id="blackOverlay"
+        class="w-full h-full absolute opacity-75 bg-black"
+      ></span>
+    </div>
+    <div class="container relative mx-auto">
+      <div class="items-center flex flex-wrap">
+        <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+          <div class="pr-12">
+            <h1
+              class="text-white font-semibold text-5xl"
+              style="font-size: 50px"
+            >
+              Don du sang 
+            </h1>
+            <p class="mt-4 text-lg text-blueGray-200" style="color: #9d9797">
+              Donner pour sauver des vies
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="pb-20 bg-blueGray-200 -mt-24">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap">
+        <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+          <div
+            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+          >
+            <div class="px-4 py-5 flex-auto">
+              <div
+                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
+              >
+                <i class="fas fa-award"></i>
+              </div>
+              <h6 class="text-xl font-semibold">Diabéte</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Le Diabète est une maladie chronique qui apparaît lorsque le pancréas ne produit pas suffisamment d’insuline ou que l’organisme n’utilise pas correctement l’insuline qu’il produit
+              </p>
+              <a [routerLink]="['maladies/anémie']">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-4/12 px-4 text-center">
+          <div
+            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+          >
+            <div class="px-4 py-5 flex-auto">
+              <div
+                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400"
+              >
+                <i class="fas fa-retweet"></i>
+              </div>
+              <h6 class="text-xl font-semibold">L'obésité </h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                L'obésité correspond à un excès de masse grasse et à une modification du tissu adipeux, entraînant des inconvénients pour la santé et pouvant réduire l'espérance de vie.
+              </p>
+              <a [routerLink]="['maladies/lymphome']">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+          <div
+            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+          >
+            <div class="px-4 py-5 flex-auto">
+              <div
+                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400"
+              >
+                <i class="fas fa-fingerprint"></i>
+              </div>
+              <h6 class="text-xl font-semibold"> hypertension </h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                L'hypertension artérielle ou HTA se définit par une élévation trop importante de pression dans les artères, élévation qui persiste dans le temps. C'est la maladie chronique la plus fréquente dans le monde.
+              </p>
+              <a [routerLink]="['maladies/hypercalcémie']">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
+   <div class="questions">
+        <h2>Test de Diabéte</h2>
+        <p>
+          Voulez vous passer un test?
+          <a href="javascript:void(0)" [routerLink]="['questionnaireOne']">Cliquez ici</a>
+        </p>
+        <h2>Test de Cancer du sein </h2>
+        <p>
+          Voulez vous passer un test?
+          <a href="javascript:void(0)" [routerLink]="['questionnaireTwo']">Cliquez ici</a>
+        </p>
+      </div>  
+    
+    </div>
+  </section>
+
+ 
+</main>
+<app-main-footer></app-main-footer>

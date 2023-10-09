@@ -1,0 +1,199 @@
+
+<div class="p-8 pt-8 pb-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-6" style="align-self: center">
+      <h1 class="text-white leftTitle" style="width: 450px; max-width: 100%">
+        Whatever happens here ,<b>Stays</b> here
+      </h1>
+      <p class="text-white leftNote">Please fill te form on the right side</p>
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <div class="card bg-secondary shadow border-0 glassCard">
+        <div class="card-body px-lg-5 py-lg-5">
+          <h1
+            class="text-white text-left mb-5"
+            style="font-weight: 900; font-size: 31px"
+          >
+            Créer un compte
+          </h1>
+          <div class="alert alert-danger" role="alert" *ngIf="registerError">
+            {{ registerError }}
+          </div>
+          <form
+            role="form"
+         
+            [formGroup]="registerForm"
+          >
+            <div class="row">
+              <div class="form-group mb-3 col-md-6">
+                <label for="firstName" class="text-white">Nom</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="firstName"
+                    class="form-control"
+                    placeholder="Nom"
+                    type="text"
+                    formControlName="nom"
+                  />
+                </div>
+              </div>
+              <div class="form-group mb-3 col-md-6">
+                <label for="lastName" class="text-white">Prénom</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="lastName"
+                    class="form-control"
+                    placeholder="Prénom"
+                    type="text"
+                    formControlName="prenom"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-3 col-md-6">
+                <label for="email" class="text-white">Email</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="email"
+                    class="form-control"
+                    placeholder="Email"
+                    type="email"
+                    formControlName="email"
+                  />
+                </div>
+              </div>
+              <div class="form-group mb-3 col-md-6">
+                <label for="phone" class="text-white">Téléphone</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="phone"
+                    class="form-control"
+                    placeholder="Téléphone"
+                    type="number"
+                    formControlName="telephone"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-3 col-md-6">
+                <label for="cin" class="text-white">Cin</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="cin"
+                    class="form-control"
+                    placeholder="Cin"
+                    type="number"
+                    formControlName="cin"
+                  />
+                </div>
+              </div>
+              <div class="form-group mb-3 col-md-6">
+                <label for="age" class="text-white">Age</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="age"
+                    class="form-control"
+                    placeholder="Age"
+                    type="number"
+                    formControlName="age"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-3 col-md-6">
+                <label for="city" class="text-white">Ville</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="city"
+                    class="form-control"
+                    placeholder="Ville"
+                    type="text"
+                    formControlName="ville"
+                  />
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="password" class="text-white">Groupe Sanguin</label>
+                <div class="input-group input-group-alternative">
+                   <select  formControlName="groupe_sanguin"  class="form-control">
+                    
+                     <option value="A+">A+</option>
+                     <option value="A-">A-</option>
+                     <option value="B+">B+</option>
+                     <option value="B-">B-</option>
+                     <option value="O+">O+</option>
+                     <option value="O-">O-</option>
+                     <option value="AB+">AB+</option>
+                     <option value="AB-">AB-</option>
+
+                   </select>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="row">
+             
+              <div class="form-group col-md-6">
+                <label for="password" class="text-white">Password</label>
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="ni ni-lock-circle-open"></i
+                    ></span>
+                  </div>
+                  <input
+                    id="password"
+                    class="form-control"
+                    placeholder="Password"
+                    type="password"
+                    formControlName="password"
+                  />
+                </div>
+              </div>
+
+
+              <div class="form-group mb-3 col-md-6">
+                <label for="city" class="text-white">Répeter password</label>
+                <div class="input-group input-group-alternative">
+                  <input
+                    id="city"
+                    class="form-control"
+                    placeholder="password"
+                    type="password"
+                    formControlName="repassword"
+                  />
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+            <div class="text-center">
+              <button
+                type="submit"
+                class="btn btn-primary my-4 submitButton text-white"
+                [disabled]="!registerForm.valid"
+                (click)="handleRegister()"
+              >
+                Confirmer <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+          <p class="note text-gray">
+            As tu deja un compte?
+            <b class="text-white cursor-pointer" [routerLink]="['/login']"
+              >s'authentifier</b
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

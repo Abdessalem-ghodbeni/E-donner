@@ -1,0 +1,579 @@
+<div class="modalContainer">
+  <h1 mat-dialog-title>Test afin de veifier si vous pouvez faire un don</h1>
+  <div mat-dialog-content>
+    <mat-stepper labelPosition="bottom" linear #stepper>
+      <mat-step [stepControl]="formStep1" [editable]="isEditable">
+        <form [formGroup]="formStep1">
+          <ng-template matStepLabel>Premiers critères</ng-template>
+          <div class="">
+            <div class="form-group">
+              <h2 class="questionType">Sexe</h2>
+              <p class="question">Etes-vous une femme ou un homme ?</p>
+              <mat-button-toggle-group
+                [formControl]="formStepControl1.gender"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="male"
+                  class="optionButton btn btn-primary"
+                  >Homme</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="female"
+                  class="optionButton btn btn-primary"
+                  >Femme</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Age</h2>
+              <p class="question">Quel âge avez-vous?</p>
+              <mat-button-toggle-group
+                [formControl]="formStepControl1.age"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="- de 18 ans"
+                  class="optionButton btn btn-primary"
+                  >- de 18 ans</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="18 à 70 ans"
+                  class="optionButton btn btn-primary"
+                  >18 à 70 ans</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="+ de 70 ans"
+                  class="optionButton btn btn-primary"
+                  >+ de 70 ans</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">poids</h2>
+              <p class="question">Quel est votre poids ?</p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl1.weight"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="- de 50 kg"
+                  class="optionButton btn btn-primary"
+                  >- de 50 kg</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="50 à 55 kg"
+                  class="optionButton btn btn-primary"
+                  >50 à 55 kg</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="+ de 55 kg"
+                  class="optionButton btn btn-primary"
+                  >+ de 55 kg</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Historique de dons</h2>
+              <p class="question">
+                Votre dernier don date de moins de 8 semaines (sang) ou 4
+                semaines (plaquettes) ou 2 semaines (plasma) ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl1.lastDate"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+          </div>
+          <div>
+            <button mat-button matStepperNext class="btn btn-primary">
+              Suivant
+            </button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="formStep2" [editable]="isEditable">
+        <form [formGroup]="formStep2">
+          <ng-template matStepLabel
+            >Maladies et infections chroniques
+          </ng-template>
+          <div class="">
+            <div class="form-group">
+              <h2 class="questionType">
+                Maladies, infections sexuellement transmissibles (MST, IST) et
+                hépatites
+              </h2>
+              <p class="question">
+                Avez-vous été testé(e) positif pour le VIH (sida), ou VHB
+                (hépatite B) ou VHC (hépatite C) ou la syphilis ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl2.maladies"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Cancer</h2>
+              <p class="question">
+                Avez-vous eu un cancer au cours de votre vie ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl2.cancer"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Maladies Chroniques</h2>
+              <p class="question">
+                Êtes-vous traité(e) pour une maladie chronique telle que :
+                diabète (traité par insuline), maladie inflammatoire de
+                l'intestin, maladie auto-immune...?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl2.chronique"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">AVC</h2>
+              <p class="question">
+                Avez-vous ressenti, dans les dernières semaines, une douleur
+                thoracique ou un essoufflement anormal à la suite d’un effort ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl2.avc"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Transfusion</h2>
+              <p class="question">
+                Avez-vous déjà eu une transfusion de sang (globules rouges,
+                plaquettes ou plasma) ou une greffe d’organe ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl2.transfusion"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+          </div>
+          <div>
+            <button mat-button matStepperPrevious class="btn btn-secondary">
+              Précédent
+            </button>
+            <button mat-button matStepperNext class="btn btn-primary">
+              Suivant
+            </button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="formStep3" [editable]="isEditable">
+        <form [formGroup]="formStep3">
+          <ng-template matStepLabel>Mode de vie </ng-template>
+          <div class="">
+            <div class="form-group">
+              <h2 class="questionType">Usage de stupéfiants</h2>
+              <p class="question">
+                Avez-vous déjà pris des drogues illicites et/ou substances
+                dopantes par voie intraveineuse ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl3.usage"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Tatouages et Piercing</h2>
+              <p class="question">
+                Avez-vous fait un tatouage ou un piercing (oreilles comprises)
+                dans les 4 derniers mois ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl3.piercing"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Vie Sexuelle</h2>
+              <p class="question">
+                Combien de partenaires sexuels avez-vous eu dans les 4 derniers
+                mois ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl3.secualLife"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+          </div>
+          <div>
+            <button mat-button matStepperPrevious class="btn btn-secondary">
+              Précédent
+            </button>
+            <button mat-button matStepperNext class="btn btn-primary">
+              Suivant
+            </button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="formStep4" [editable]="isEditable">
+        <form [formGroup]="formStep4">
+          <ng-template matStepLabel
+            >Examens et opérations chirurgicales</ng-template
+          >
+          <div class="">
+            <div class="form-group">
+              <h2 class="questionType">Anémie</h2>
+              <p class="question">
+                Êtes-vous suivi(e) par votre médecin pour une anémie (baisse du
+                taux d’hémoglobine) ou un manque de fer ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl4.anemia"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Examens</h2>
+              <p class="question">
+                Avez-vous fait un examen de type « fibroscopie » gastrique, ORL,
+                pulmonaire fibroscopie Coloscopie dans les 4 derniers mois ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl4.examens"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Opérations</h2>
+              <p class="question">
+                Avez-vous été opéré(e) dans les 4 derniers mois ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl4.operations"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+          </div>
+          <div>
+            <button mat-button matStepperPrevious class="btn btn-secondary">
+              Précédent
+            </button>
+            <button mat-button matStepperNext class="btn btn-primary">
+              Suivant
+            </button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="formStep5" [editable]="isEditable">
+        <form [formGroup]="formStep5">
+          <ng-template matStepLabel>Voyages et déplacements</ng-template>
+          <div class="">
+            <div class="form-group">
+              <h2 class="questionType">Royaume-Uni</h2>
+              <p class="question">
+                Avez-vous séjourné plus d’un an cumulé au Royaume-Uni entre le
+                1er janvier 1980 & le 31 décembre 1996 ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl5.uk"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Voyages</h2>
+              <p class="question">
+                Avez-vous voyagé dans les 4 derniers mois ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl5.travel"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+          </div>
+          <div>
+            <button mat-button matStepperPrevious class="btn btn-secondary">
+              Précédent
+            </button>
+            <button mat-button matStepperNext class="btn btn-primary">
+              Suivant
+            </button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="formStep6" [editable]="isEditable">
+        <form [formGroup]="formStep6">
+          <ng-template matStepLabel>Dernières vérifications</ng-template>
+          <div class="">
+            <div class="form-group">
+              <h2 class="questionType">Fièvre</h2>
+              <p class="question">
+                Avez-vous eu de la fièvre* ou une infection (toux, diarrhée,
+                infection urinaire, plaie cutanée…) dans les 2 dernières
+                semaines ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl6.fever"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Soins Dentaires</h2>
+              <p class="question">
+                Avez-vous eu des soins dentaires depuis moins de 24 heures
+                (carie, détartrage), un traitement de racine ou une extraction
+                dentaire depuis moins d’une semaine ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl6.teeth"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+            <div class="form-group">
+              <h2 class="questionType">Médicaments</h2>
+              <p class="question">
+                Prenez-vous des médicaments, même tous les jours ?
+              </p>
+
+              <mat-button-toggle-group
+                [formControl]="formStepControl6.medications"
+                class="optionsContainer"
+              >
+                <mat-button-toggle
+                  value="oui"
+                  class="optionButton btn btn-primary"
+                  >Oui</mat-button-toggle
+                >
+                <mat-button-toggle
+                  value="non"
+                  class="optionButton btn btn-primary"
+                  >Non</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+          </div>
+          <div>
+            <button mat-button matStepperPrevious class="btn btn-secondary">
+              Précédent
+            </button>
+
+            <!-- <button mat-button (click)="stepper.reset()" class="btn btn-secondary">
+              Annuler
+            </button> -->
+            <button
+              mat-button
+              class="btn btn-primary"
+              (click)="confirm()"
+              [disabled]="!formStep6.valid"
+              [mat-dialog-close]="formsData"
+              cdkFocusInitial
+            >
+              Confirmer
+            </button>
+          </div>
+        </form>
+      </mat-step>
+    </mat-stepper>
+  </div>
+  <!-- <div mat-dialog-actions>
+    <button mat-button class="btn btn-secondary" mat-dialog-close>
+      Anuuler
+    </button>
+    <button mat-button class="btn btn-primary" cdkFocusInitial>
+      Confirmer
+    </button>
+  </div> -->
+  <!-- [mat-dialog-close]="''" -->
+</div>
